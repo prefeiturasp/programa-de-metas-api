@@ -1,0 +1,63 @@
+{
+    "name": "pmsp-smdu",
+    "description": "Ferramenta de importaçãdos dados e api para acesso",
+    "keywords": ["api", "import", "tool", "open", "government"],
+    "license": "MIT",
+    "require": {
+        "laravel/framework": "4.1.*",
+        "guilhermeguitte/behat-laravel": "dev-master",
+        "behat/behat": "2.5.x-dev",
+        "PHPOffice/PHPExcel": "dev-master",
+        "way/generators": "dev-master",
+        "way/laravel-test-helpers": "dev-master"
+    },
+    "require-dev": {
+    },
+    "repositories": [{
+        "type": "package",
+        "package": {
+            "name": "PHPOffice/PHPExcel",
+            "version": "1.7.8",
+            "source": {
+                "url": "https://github.com/PHPOffice/PHPExcel.git",
+                "type": "git",
+                "reference": "PHPExcel_1.7.8"
+            },
+            "autoload": {
+                "psr-0": {
+                    "PHPExcel": "Classes/"
+                }
+            }
+        }
+    }],
+    "autoload": {
+        "classmap": [
+            "app/commands",
+            "app/controllers",
+            "app/models",
+            "app/database/migrations",
+            "app/database/seeds",
+            "app/tests/TestCase.php",
+
+            "app/src",
+            "app/src/Importer"
+        ]
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php artisan clear-compiled",
+            "php artisan optimize"
+        ],
+        "post-update-cmd": [
+            "php artisan clear-compiled",
+            "php artisan optimize"
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev"
+}
