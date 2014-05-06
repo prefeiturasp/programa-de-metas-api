@@ -1,5 +1,10 @@
 ## Programa De Metas
 
+### Requerimentos
+
+1. PHP 5.4
+2. Composer https://getcomposer.org/
+
 ### Configuração inicial
 
 1. clone this repo
