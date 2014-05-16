@@ -13,6 +13,7 @@ class GoalController extends BaseController
         $secretary = Input::get('secretary');
         $prefecture = Input::get('prefecture');
         $status = Input::get('status');
+        $label = Input::get('label');
 
         //Cache::forget('homepage.goals');
         //$metas = Cache::rememberForever('homepage.goals', function () use ($axis, $articulation, $objective, $prefecture, $secretary) {
@@ -24,6 +25,7 @@ class GoalController extends BaseController
                     ->objective($objective)
                     ->prefecture($prefecture)
                     ->secretary($secretary)
+                    ->label($label)
                     ->get();
 
         foreach ($metas as $k => $meta) {
