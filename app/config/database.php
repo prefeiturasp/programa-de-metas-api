@@ -54,8 +54,8 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'local.dev',
-			'database'  => 'pdm-api',
+			'host'      => 'localhost',
+			'database'  => 'pdm_api',
 			'username'  => 'wp',
 			'password'  => 'wp',
 			'charset'   => 'utf8',
