@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'local.dev',
-			'database'  => 'pdm-api',
+			'database'  => 'pdm_api',
 			'username'  => 'root',
 			'password'  => 'vagrant',
 			'charset'   => 'utf8',
