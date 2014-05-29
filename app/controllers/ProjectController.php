@@ -60,7 +60,7 @@ class ProjectController extends BaseController
     {
         $projects = $features = array();
 
-        $projects = Project::with(array('goal.secretaries', 'goal', 'prefectures'))->take(100)->get();
+        $projects = Project::with(array('goal.secretaries', 'goal', 'prefectures'))->get();
 
         foreach ($projects as $project) {
             $point = new Point(array(floatval($project['gps_lat']), floatval($project['gps_long'])));
