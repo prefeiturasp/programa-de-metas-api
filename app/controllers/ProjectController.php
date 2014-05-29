@@ -77,7 +77,7 @@ class ProjectController extends BaseController
             $features[] = new Feature($point, $properties);
         }
 
-        return json_encode(new FeatureCollection($features));
+        return Response::json(new FeatureCollection($features))->setCallback(Input::get('callback'));
     }
 
     public function status($id)
