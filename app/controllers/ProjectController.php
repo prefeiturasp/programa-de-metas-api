@@ -60,19 +60,19 @@ class ProjectController extends BaseController
     {
         $projects = $features = array();
 
-        $projects = Project::with(array('prefectures'))->take(10)->get();
+        $projects = Project::with(array('goal.secretaries', 'goal', 'prefectures'))->take(100)->get();
 
         foreach ($projects as $project) {
             $point = new Point(array(floatval($project['gps_lat']), floatval($project['gps_long'])));
-
             $properties = array(
                 'id'           => $project['id'],
                 'name'         => $project['name'],
+                'address'      => $project['address'],
                 'prefectures'  => $project['prefectures']->toArray(),
-                'secretary'    => $project['secretary'],
-                'objective'    => $project['objective'],
+                'secretary'    => $project['goal']['secretaries']->toArray(),
+                'objective'    => $project['goal']['objective_id'],
                 'goal_id'      => $project['goal_id'],
-                'location_type'=> ''
+                'location_type'=> $project['location_type']
             );
             $features[] = new Feature($point, $properties);
         }
