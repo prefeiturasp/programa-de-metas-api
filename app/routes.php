@@ -40,6 +40,9 @@ Route::get("goal/{id}/projects", array(
 ));
 
 // projects
+Route::get("projects.geojson", array(
+    "uses" => "ProjectController@geojson"
+));
 Route::get("projects/types", array(
     "uses" => "ProjectController@types"
 ));

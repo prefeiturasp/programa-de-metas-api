@@ -1,6 +1,8 @@
 <?php
-
 use \Src\Milestones;
+use \GeoJson\Geometry\Point;
+use \GeoJson\Feature\Feature;
+use \GeoJson\Feature\FeatureCollection;
 
 class ProjectController extends BaseController
 {
@@ -21,6 +23,61 @@ class ProjectController extends BaseController
             array('id'=>'7','name'=>'Atos Normativos'),
             array('id'=>'8','name'=>'Novos serviços ou benefícios'),
             );
+    }
+    /**
+     *  {
+     *      type: "Feature",
+     *      properties: {
+     *          id: 1,
+     *          name: "Ecoponto Água Rasa",
+     *          goal_id: 91,
+     *          project_type: 1,
+     *          district: "Água Rasa",
+     *          address: "Av. Salim Farah Maluf, 1500",
+     *          gps_lat: -23.556476,
+     *          gps_long: -46.577297,
+     *          weight_about_goal: 1.19,
+     *          budget_executed: 157992.35,
+     *          qualitative_progress_1: "NULL",
+     *          qualitative_progress_2: "NULL",
+     *          qualitative_progress_3: "NULL",
+     *          qualitative_progress_4: "NULL",
+     *          qualitative_progress_5: "NULL",
+     *          qualitative_progress_6: "NULL",
+     *          created_at: "2014-04-03 12:25:28",
+     *          updated_at: "2014-04-03 12:25:28"
+     *      },
+     *      geometry: {
+     *          type: "Point",
+     *          coordinates: [
+     *          -46.577297,
+     *          -23.556476
+     *          ]
+     *      }
+     *  },
+    **/
+    public function geojson()
+    {
+        $projects = $features = array();
+
+        $projects = Project::with(array('prefectures'))->take(10)->get();
+
+        foreach ($projects as $project) {
+            $point = new Point(array(floatval($project['gps_lat']), floatval($project['gps_long'])));
+
+            $properties = array(
+                'id'           => $project['id'],
+                'name'         => $project['name'],
+                'prefectures'  => $project['prefectures']->toArray(),
+                'secretary'    => $project['secretary'],
+                'objective'    => $project['objective'],
+                'goal_id'      => $project['goal_id'],
+                'location_type'=> ''
+            );
+            $features[] = new Feature($point, $properties);
+        }
+
+        return json_encode(new FeatureCollection($features));
     }
 
     public function status($id)

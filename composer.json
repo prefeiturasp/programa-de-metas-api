@@ -9,7 +9,8 @@
         "behat/behat": "2.5.x-dev",
         "PHPOffice/PHPExcel": "dev-master",
         "way/generators": "dev-master",
-        "way/laravel-test-helpers": "dev-master"
+        "way/laravel-test-helpers": "dev-master",
+        "jmikola/geojson": "~1.0"
     },
     "require-dev": {
     },
