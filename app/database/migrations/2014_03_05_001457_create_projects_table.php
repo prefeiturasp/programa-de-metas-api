@@ -30,6 +30,7 @@ class CreateProjectsTable extends Migration {
             $table->text('qualitative_progress_4')->nullable();
             $table->text('qualitative_progress_5')->nullable();
             $table->text('qualitative_progress_6')->nullable();
+            $table->string('location_type');
             $table->timestamps();
         });
     }

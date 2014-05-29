@@ -1,35 +1,36 @@
-acronym,name
-AF,Aricanduva/Formosa/Carrão
-BT,Butantã
-CL,Campo Limpo
-CS,Capela do Socorro
-CV,Casa Verde/Cachoeirinha
-AD,Cidade Ademar
-CT,Cidade Tiradentes
-EM,Ermelino Matarazzo
-FO,Freguesia/Brasilândia
-G,Guaianases
-IP,Ipiranga
-IT,Itaim Paulista
-IQ,Itaquera
-JA ,Jabaquara
-JT,Jaçanã/Tremembé
-LA,Lapa
-MB,M'Boi Mirim
-MO,Mooca
-PA,Parelheiros
-PE,Penha
-PR,Perus
-PI,Pinheiros
-PJ,Pirituba
-ST,Santana/Tucuruvi
-SA,Santo Amaro
-SM,São Mateus
-MP,São Miguel
-SE,Sé
-MG,Vila Maria/Vila Guilherme
-VM,Vila Mariana
-VP,Vila Prudente
-SB,Sapopemba
-SR,Supra-regional
-SG,Sigiloso
+acronym,name,gps_lat,gps_long
+AF,Aricanduva/Formosa/Carrão,"-23.549884","-46.536692"
+BT,Butantã,"-23.588369","-46.738026"
+CL,Campo Limpo,"-23.647178","-46.756453"
+CS,Capela do Socorro,"-23.719853","-46.701631"
+CV,Casa Verde/Cachoeirinha,"-23.518827","-46.667202"
+AD,Cidade Ademar,"-23.667083","-46.675166"
+CT,Cidade Tiradentes,"-23.583831","-46.415072"
+EM,Ermelino Matarazzo,"-23.507539","-46.480006"
+FO,Freguesia/Brasilândia,"-23.476247","-46.664606"
+G,Guaianases,"-23.542702","-46.424817"
+IP,Ipiranga,"-23.587567","-46.603258"
+IT,Itaim Paulista,"-23.49402","-46.416706"
+IQ,Itaquera,"-23.536844","-46.45446"
+JA ,Jabaquara,"-23.49402","-46.416706"
+JT,Jaçanã/Tremembé,"-23.468206","-46.582182"
+LA,Lapa,"-23.52247","-46.695516"
+MB,M'Boi Mirim,"-23.667643","-46.728435"
+MO,Mooca,"-23.551346","-46.597937"
+PA,Parelheiros,"-23.81517","-46.73532"
+PE,Penha,"-23.518688","-46.521483"
+PR,Perus,"-23.518688","-46.521483"
+PI,Pinheiros,"-23.564339","-46.703263"
+PJ,Pirituba,"-23.485963","-46.719397"
+ST,Santana/Tucuruvi,"-23.485963","-46.719397"
+SA,Santo Amaro,"-23.6511","-46.707524"
+SM,São Mateus,"-23.6511","-46.707524"
+MP,São Miguel,"-23.500517","-46.451191"
+SE,Sé,"-23.547886","-46.634732"
+MG,Vila Maria/Vila Guilherme,"-23.501387","-46.591497"
+VM,Vila Mariana,"-23.598524","-46.649488"
+VP,Vila Prudente,"-23.582639","-46.560577"
+SB,Sapopemba,"-23.600263","-46.51282"
+SR,Supra-regional,"",""
+SG,Sigiloso,"-23.546628", "-46.637787"
+ED,Em definição,"",""
