@@ -148,6 +148,7 @@ class Importer
                         $Qualitative4    = $project[WorksheetGuide::$availables['project'][$type]['qualitative_progress_4']];
                         $Qualitative5    = $project[WorksheetGuide::$availables['project'][$type]['qualitative_progress_5']];
                         $Qualitative6    = $project[WorksheetGuide::$availables['project'][$type]['qualitative_progress_6']];
+                        $Location        = $project[WorksheetGuide::$availables['project'][$type]['location_type']];
 
                         $extraFields = array();
                         if (($type > 0) && ($type < 6)) {
@@ -198,7 +199,8 @@ class Importer
                                     'qualitative_progress_3' => $Qualitative3,
                                     'qualitative_progress_4' => $Qualitative4,
                                     'qualitative_progress_5' => $Qualitative5,
-                                    'qualitative_progress_6' => $Qualitative6
+                                    'qualitative_progress_6' => $Qualitative6,
+                                    'location_type'          => $Location
                                 ),
                                 $extraFields
                             )

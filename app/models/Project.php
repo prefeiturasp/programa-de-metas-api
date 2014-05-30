@@ -20,6 +20,7 @@ class Project extends Eloquent
         'qualitative_progress_4',
         'qualitative_progress_5',
         'qualitative_progress_6',
+        'location_type'
     );
 
     public function goal()

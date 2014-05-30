@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'local.dev',
+			'host'      => 'localhost',
 			'database'  => 'pdm_api',
-			'username'  => 'root',
-			'password'  => 'vagrant',
+			'username'  => 'wp',
+			'password'  => 'wp',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

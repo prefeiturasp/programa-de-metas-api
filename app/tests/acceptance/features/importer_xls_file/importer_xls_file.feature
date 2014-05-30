@@ -12,20 +12,19 @@ Scenario: List available files to import
     Then i should recieve a list of filenames
     """
     app/storage/importer/primeira-versao-22-02.xls
-    app/storage/importer/segunda-versao-27-02.xls
-    app/storage/importer/terceira-versao-28-02.xls
+    app/storage/importer/segunda-versao-29-05.xls
     app/storage/importer/teste-conteudo.xls
     app/storage/importer/versao-sem-tipo-4-e-5.xls
     """
 
 Scenario: Import goals with success
-    Given i have a parsed content "decima-primeira-versao-02-04.xls"
+    Given i have a parsed content "decima-oitava-versao.xls"
     And i have validate goals
     When i try to save goals to database
     Then i should receive a list of successfull changes
 @current
 Scenario Outline: Import projects with success
-    Given i have a parsed content "decima-primeira-versao-02-04.xls"
+    Given i have a parsed content "decima-oitava-versao.xls"
     And i have validate projects of type <type_of_project>
     When i try to save projects of type <type_of_project> to database
     Then i should receive a list of successfull changes
@@ -40,3 +39,4 @@ Scenario Outline: Import projects with success
     |        6        |
     |        7        |
     |        8        |
+

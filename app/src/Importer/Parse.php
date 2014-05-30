@@ -1,9 +1,7 @@
 <?php
 
 namespace Src\Importer;
-
 use \Src\Importer\Read;
-
 class Parse
 {
     static public $nameofWorksheetOfMeta           = 'Status_metas';

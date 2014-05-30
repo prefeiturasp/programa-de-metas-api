@@ -16,6 +16,8 @@ class CreatePrefecturesTable extends Migration {
 			$table->increments('id');
 			$table->string('name')->unique();
 			$table->string('acronym')->index();
+            $table->string('gps_lat')->nullable();
+            $table->string('gps_long')->nullable();
 			$table->timestamps();
 		});
 	}

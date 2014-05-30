@@ -17,7 +17,7 @@ Route::get('/', function()
 });
 
 // goals
-Route::get("goals/{axis?}{articulation?}{secretary?}{objective?}{prefecture?}", array(
+Route::get("goals/{axis?}{articulation?}{secretary?}{objective?}{prefecture?}{label?}", array(
     "uses" => "GoalController@index"
 ));
 
@@ -40,6 +40,9 @@ Route::get("goal/{id}/projects", array(
 ));
 
 // projects
+Route::get("projects.geojson", array(
+    "uses" => "ProjectController@geojson"
+));
 Route::get("projects/types", array(
     "uses" => "ProjectController@types"
 ));
@@ -74,4 +77,8 @@ Route::get("prefectures/findByCoordinates/{lat}/{long}", array(
 ));
 Route::get("articulations", array(
     "uses" => "ArticulationController@index"
+));
+
+Route::get("labels", array(
+    "uses" => "LabelController@index"
 ));

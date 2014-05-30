@@ -13,6 +13,7 @@ class GoalController extends BaseController
         $secretary = Input::get('secretary');
         $prefecture = Input::get('prefecture');
         $status = Input::get('status');
+        $label = Input::get('label');
 
         //Cache::forget('homepage.goals');
         //$metas = Cache::rememberForever('homepage.goals', function () use ($axis, $articulation, $objective, $prefecture, $secretary) {
@@ -24,6 +25,7 @@ class GoalController extends BaseController
                     ->objective($objective)
                     ->prefecture($prefecture)
                     ->secretary($secretary)
+                    ->label($label)
                     ->get();
 
         foreach ($metas as $k => $meta) {
@@ -192,7 +194,7 @@ class GoalController extends BaseController
                     $total = $total + (floatval($project['weight_about_goal'])*$this->getMilestonesPercentageComplete($project['id'], $project['project_type']));
                 } elseif ($project['project_type'] == 8) {
                     if ($project['weight_about_goal'] == 0) {
-                        $total = 0;
+                        $total = 0 + $total;
                     } else {
                         $total = $total + (floatval($project['weight_about_goal'])*$this->getMonthByMonthPercentageComplete($project['id'],$project['goal_id']));
                     }

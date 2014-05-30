@@ -10,6 +10,15 @@ class Goal extends Eloquent
         1=>'não iniciada'
     );
 
+    public static $labelName = array(
+        array('id' => 'agenda-pop-rua',   'name' => 'Agenda PopRua'),
+        array('id' => 'historia-africa',  'name' => 'Ensino Afro'),
+        array('id' => 'juventude-viva',   'name' => 'Juventude Viva'),
+        array('id' => 'sp-aberta',        'name' => 'São Paulo Aberta'),
+        array('id' => 'sp-carinhosa',     'name' => 'São Paulo Carinhosa'),
+        array('id' => 'sp-mais-inclusiva','name' => 'São Paulo Mais Inclusiva')
+    );
+
     public function secretaries()
     {
         return $this->belongsToMany('Secretary');
@@ -76,6 +85,15 @@ class Goal extends Eloquent
         }
 
         return $query->whereIn('status', $value);
+    }
+
+    public function scopeLabel($query, $value)
+    {
+        if (is_null($value)) {
+            return $query;
+        }
+
+        return $query->where('transversalidade', 'like', '%' . $value . '%');
     }
 
     public function scopePrefecture($query, $value)

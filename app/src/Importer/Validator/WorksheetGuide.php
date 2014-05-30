@@ -42,7 +42,8 @@ class WorksheetGuide
                 'qualitative_progress_3' => 'S',
                 'qualitative_progress_4' => 'T',
                 'qualitative_progress_5' => 'U',
-                'qualitative_progress_6' => 'V'
+                'qualitative_progress_6' => 'V',
+                'location_type'          => 'Z'
             ),
             2 => array(
                 'goal_id'          => 'A',
@@ -66,7 +67,8 @@ class WorksheetGuide
                 'qualitative_progress_3' => 'R',
                 'qualitative_progress_4' => 'S',
                 'qualitative_progress_5' => 'T',
-                'qualitative_progress_6' => 'U'
+                'qualitative_progress_6' => 'U',
+                'location_type'          => 'Y'
             ),
             3 => array(
                 'goal_id'          => 'A',
@@ -88,7 +90,8 @@ class WorksheetGuide
                 'qualitative_progress_3' => 'P',
                 'qualitative_progress_4' => 'Q',
                 'qualitative_progress_5' => 'R',
-                'qualitative_progress_6' => 'S'
+                'qualitative_progress_6' => 'S',
+                'location_type'          => 'W'
             ),
             4 => array(
                 'goal_id'          => 'A',
@@ -110,7 +113,8 @@ class WorksheetGuide
                 'qualitative_progress_3' => 'P',
                 'qualitative_progress_4' => 'Q',
                 'qualitative_progress_5' => 'R',
-                'qualitative_progress_6' => 'S'
+                'qualitative_progress_6' => 'S',
+                'location_type'          => 'W'
             ),
             5 => array(
                 'goal_id'          => 'A',
@@ -130,7 +134,8 @@ class WorksheetGuide
                 'qualitative_progress_3' => 'N',
                 'qualitative_progress_4' => 'O',
                 'qualitative_progress_5' => 'P',
-                'qualitative_progress_6' => 'Q'
+                'qualitative_progress_6' => 'Q',
+                'location_type'          => 'U'
             ),
             6 => array(
                 'goal_id'          => 'A',
@@ -151,7 +156,8 @@ class WorksheetGuide
                 'qualitative_progress_3' => 'O',
                 'qualitative_progress_4' => 'P',
                 'qualitative_progress_5' => 'Q',
-                'qualitative_progress_6' => 'R'
+                'qualitative_progress_6' => 'R',
+                'location_type'          => 'V'
             ),
             7 => array(
                 'goal_id'          => 'A',
@@ -171,7 +177,8 @@ class WorksheetGuide
                 'qualitative_progress_3' => 'N',
                 'qualitative_progress_4' => 'O',
                 'qualitative_progress_5' => 'P',
-                'qualitative_progress_6' => 'Q'
+                'qualitative_progress_6' => 'Q',
+                'location_type'          => 'U'
             ),
             8 => array(
                 'goal_id'          => 'A',
@@ -193,8 +200,7 @@ class WorksheetGuide
                     '2013-09-01' => 'P',
                     '2013-10-01' => 'Q',
                     '2013-11-01' => 'R',
-                    '2013-12-01' => 'S'/*,
-
+                    '2013-12-01' => 'S',
                     '2014-01-01' => 'T',
                     '2014-02-01' => 'U',
                     '2014-03-01' => 'V',
@@ -206,7 +212,7 @@ class WorksheetGuide
                     '2014-09-01' => 'AB',
                     '2014-10-01' => 'AC',
                     '2014-11-01' => 'AD',
-                    '2014-12-01' => 'AE',
+                    '2014-12-01' => 'AE'/*,
 
                     '2015-01-01' => 'AF',
                     '2015-02-01' => 'AG',
@@ -242,7 +248,8 @@ class WorksheetGuide
                 'qualitative_progress_3' => 'BH',
                 'qualitative_progress_4' => 'BI',
                 'qualitative_progress_5' => 'BJ',
-                'qualitative_progress_6' => 'BK'
+                'qualitative_progress_6' => 'BK',
+                'location_type'          => 'BO'
             )
         )
     );
