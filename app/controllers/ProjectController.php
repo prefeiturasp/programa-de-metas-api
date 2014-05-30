@@ -61,8 +61,16 @@ class ProjectController extends BaseController
         $projects = $features = array();
 
         $projects = Project::with(array('goal.secretaries', 'goal', 'prefectures'))->get();
+        $objectives = Objective::all();
 
         foreach ($projects as $project) {
+
+            foreach ($objectives as $obj) {
+                if ($obj['id']==$project['goal']['objective_id']) {
+                    $objective_name = $obj['name'];
+                }
+            }
+
             $point = new Point(array(floatval($project['gps_lat']), floatval($project['gps_long'])));
             $properties = array(
                 'id'           => $project['id'],
@@ -70,7 +78,7 @@ class ProjectController extends BaseController
                 'address'      => $project['address'],
                 'prefectures'  => $project['prefectures']->toArray(),
                 'secretary'    => $project['goal']['secretaries']->toArray(),
-                'objective'    => $project['goal']['objective_id'],
+                'objective'    => $objective_name,
                 'goal_id'      => $project['goal_id'],
                 'location_type'=> $project['location_type']
             );
