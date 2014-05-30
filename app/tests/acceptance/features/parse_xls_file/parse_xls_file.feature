@@ -4,7 +4,7 @@ As Developer
 I need to be able to get the content from spreadsheet easily, without config anything
 
 Background: Read content of file
-    Given a opened file named "segunda-versao-27-02.xls"
+    Given a opened file named "decima-sexta-versao.xls"
 
 Scenario: Receive a list of worksheets
     Given There is a excel file loaded

@@ -20,7 +20,7 @@ class CreateProjectMonthlyProgressesTable extends Migration {
             $table->foreign('prefecture_id')->references('id')->on('prefectures')->onDelete('cascade');
             $table->integer('goal_target')->nullable();
             $table->datetime('month_year');
-            $table->integer('value')->nullable();
+            $table->decimal('value',15,2)->nullable();
             $table->timestamps();
         });
     }
