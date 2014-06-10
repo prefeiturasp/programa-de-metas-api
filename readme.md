@@ -1,5 +1,7 @@
 ## Programa De Metas
 
+<img src="https://www.codeship.io/projects/1ec29030-d2fe-0131-5261-7a7c9560a8ff/status"/>
+
 ### Requerimentos
 
 1. PHP 5.4
