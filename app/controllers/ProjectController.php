@@ -71,7 +71,7 @@ class ProjectController extends BaseController
                 }
             }
 
-            $point = new Point(array(floatval($project['gps_lat']), floatval($project['gps_long'])));
+            $point = new Point(array(floatval($project['gps_long']), floatval($project['gps_lat'])));
             $properties = array(
                 'id'           => $project['id'],
                 'name'         => $project['name'],
