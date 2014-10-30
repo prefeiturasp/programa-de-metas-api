@@ -80,7 +80,7 @@ class GoalController extends BaseController
                 if (!$ja_contou) {
                     foreach ($milestones as $milestone) {
                         $milestones_of_group = Milestones::$groups[2]['milestones'][$project['project_type']];
-                        if (($milestone['status']>=50) && (in_array($milestone['milestone'], $milestones_of_group))) {
+                        if ((!$ja_contou) && ($milestone['status']>=50) && (in_array($milestone['milestone'], $milestones_of_group))) {
                             $progress['tipos_agrupados'][2] = $progress['tipos_agrupados'][2] + 1;
                             $ja_contou = true;
                         }
