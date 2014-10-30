@@ -74,6 +74,7 @@ class Importer
     {
         try {
             $validateGoals = $this->getValidGoals();
+
             foreach ($validateGoals as $goal) {
 
                 $Id               = $goal[WorksheetGuide::$availables['goal']['id']];

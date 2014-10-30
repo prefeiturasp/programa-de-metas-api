@@ -10,7 +10,7 @@ class BaseController extends Controller {
 
     protected $goals_grouped = array(
             11, // (consultórios na rua),
-            35, // (Unid. Habitacionais),
+            // 35, // (Unid. Habitacionais),
             37, // (Regularização fundiária),
             42, // (Casas de mediação),
             47, // (Esporte 24h),

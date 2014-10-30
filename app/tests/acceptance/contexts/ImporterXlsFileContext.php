@@ -45,7 +45,7 @@ class ImporterXlsFileContext extends BaseContext
     public function iTryToListMyAvailableOptions()
     {
         $this->availableFilenames = $this->importerInstance->getAvailableFilenames();
-        Assert::count(8, $this->availableFilenames);
+        Assert::count(12, $this->availableFilenames);
     }
 
     /**

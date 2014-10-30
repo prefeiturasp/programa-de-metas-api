@@ -18,13 +18,13 @@ Scenario: List available files to import
     """
 
 Scenario: Import goals with success
-    Given i have a parsed content "decima-oitava-versao.xls"
+    Given i have a parsed content "decima-nona-versao.xlsx"
     And i have validate goals
     When i try to save goals to database
     Then i should receive a list of successfull changes
 @current
 Scenario Outline: Import projects with success
-    Given i have a parsed content "decima-oitava-versao.xls"
+    Given i have a parsed content "decima-nona-versao.xlsx"
     And i have validate projects of type <type_of_project>
     When i try to save projects of type <type_of_project> to database
     Then i should receive a list of successfull changes

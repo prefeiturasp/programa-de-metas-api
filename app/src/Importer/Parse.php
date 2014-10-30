@@ -4,16 +4,17 @@ namespace Src\Importer;
 use \Src\Importer\Read;
 class Parse
 {
-    static public $nameofWorksheetOfMeta           = 'Status_metas';
+    static public $nameofWorksheetOfMeta           = 'Status_Meta';
+
     static public $nameofWorksheetOfProjetoDoTipo = array(
-        1 => 'Status tipo 1',
-        2 => 'Status tipo  2',
-        3 => 'Status tipo 3',
-        4 => 'Status tipo 4',
-        5 => 'Status tipo 5',
-        6 => 'Status tipo 6',
-        7 => 'Status tipo 7',
-        8 => 'Status tipo 8');
+        1 => 'Tipo 1',
+        2 => 'Tipo 2',
+        3 => 'Tipo 3',
+        4 => 'Tipo 4',
+        5 => 'Tipo 5',
+        6 => 'Tipo 6',
+        7 => 'Tipo 7',
+        8 => 'Tipo 8');
 
     public $spreadsheet;
 
