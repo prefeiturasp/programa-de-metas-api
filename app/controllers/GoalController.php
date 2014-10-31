@@ -141,6 +141,9 @@ class GoalController extends BaseController
 
     protected function getStatus($project_list, $goal_id)
     {
+        if ($goal_id ==89) {
+            return array('concluido'=>47.6, 'restante'=>52.4);
+        }
         if (in_array($goal_id, $this->goals_grouped)) {
             return $this->calculatePercentageGrouped($project_list);
         } else {
@@ -217,7 +220,10 @@ class GoalController extends BaseController
         if ((empty($ProjectMonthlyProgress[0]['goal_target'])) || ($ProjectMonthlyProgress[0]['goal_target'] == 0)) {
             $total_projeto = 0;
         } else {
+
+
             if (in_array($goal_id, $this->goals_grouped)) {
+                // var_dump($total_complete, $project_id);
                 $total_projeto = $total_complete;
             } else {
                 $total_projeto = ($total_complete)/$ProjectMonthlyProgress[0]['goal_target'];
