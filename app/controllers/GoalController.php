@@ -143,6 +143,8 @@ class GoalController extends BaseController
     {
         if ($goal_id ==89) {
             return array('concluido'=>47.6, 'restante'=>52.4);
+        } else if ($goal_id ==114) {
+            return array('concluido'=>100, 'restante'=>0);
         }
         if (in_array($goal_id, $this->goals_grouped)) {
             return $this->calculatePercentageGrouped($project_list);
